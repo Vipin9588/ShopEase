@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ShopEase - Your Online Shopping Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-indigo-600">ShopEase</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-indigo-600">Home</a>
+                    <a href="#products" class="text-gray-700 hover:text-indigo-600">Products</a>
+                    <a href="#offers" class="text-gray-700 hover:text-indigo-600">Offers</a>
+                    <a href="#lists" class="text-gray-700 hover:text-indigo-600">Shopping Lists</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="cart.html" id="cartBtn" class="relative p-2 text-gray-700 hover:text-indigo-600">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
+                    <button class="md:hidden p-2 text-gray-700" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="#products" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Products</a>
+                <a href="#offers" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offers</a>
+                <a href="#lists" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Shopping Lists</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Offers (unchanged as you requested) -->
+    <section id="offers" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Summer Sale is Here!</h1>
+                    <p class="text-xl mb-6">Up to 50% off on selected items. Don't miss out on these amazing deals!</p>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4 mb-6">
+                        <h3 class="font-bold text-lg mb-2">Today's Special Offer</h3>
+                        <p class="mb-2">Buy 2 Get 1 Free on all electronics</p>
+                        <p class="text-sm">Offer valid until <span class="font-bold">July 31st</span></p>
+                    </div>
+                    <button class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300">
+                        Shop Now
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-yellow-400 rounded-full opacity-20"></div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-pink-400 rounded-full opacity-20"></div>
+                        <div class="relative bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 shadow-xl">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-white text-indigo-600 p-2 rounded-full mr-3">
+                                    <i class="fas fa-tag text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Flash Sale</h3>
+                                    <p class="text-sm">Ends in 24 hours</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white bg-opacity-30 rounded-lg p-3 text-center pulse-animation">
+                                    <p class="text-sm">Smartphones</p>
+                                    <p class="font-bold">30% OFF</p>
+                                </div>
+                                <div class="bg-white bg-opacity-30 rounded-lg p-3 text-center pulse-animation">
+                                    <p class="text-sm">Laptops</p>
+                                    <p class="font-bold">25% OFF</p>
+                                </div>
+                                <div class="bg-white bg-opacity-30 rounded-lg p-3 text-center pulse-animation">
+                                    <p class="text-sm">Headphones</p>
+                                    <p class="font-bold">40% OFF</p>
+                                </div>
+                                <div class="bg-white bg-opacity-30 rounded-lg p-3 text-center pulse-animation">
+                                    <p class="text-sm">Accessories</p>
+                                    <p class="font-bold">50% OFF</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls: Search + Category -->
+    <section class="max-w-7xl mx-auto px-4 mt-8">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div class="w-full md:w-2/3 flex gap-2">
+                <input id="searchInput" type="text" placeholder="Search products..." class="w-full px-4 py-3 rounded-lg border focus:outline-none" />
+                <button id="searchBtn" class="bg-indigo-600 text-white px-4 py-3 rounded-lg hover:bg-indigo-700">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="w-full md:w-1/3 flex gap-2">
+                <select id="categorySelect" class="w-full px-4 py-3 rounded-lg border focus:outline-none">
+                    <option value="">All Categories</option>
+                </select>
+                <button id="clearFilters" class="px-4 py-3 rounded-lg border hover:bg-gray-100">Clear</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-12 bg-white mt-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Our Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Browse our wide selection of high-quality products at competitive prices.</p>
+            </div>
+            
+            <div id="mainShopContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- product cards injected here -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <div id="loader" class="loaderContainer h-20 flex justify-center">
+                    <!-- loader circle -->
+                    <svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg>
+                </div>
+
+                <button id="viewAllBox" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition duration-300 mt-6">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (kept simple) -->
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ShopEase</h3>
+                    <p class="text-gray-400">Your one-stop shop for all your needs. Quality products at affordable prices.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#offers" class="text-gray-400 hover:text-white">Offers</a></li>
+                        <li><a href="#lists" class="text-gray-400 hover:text-white">Shopping Lists</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new products and offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-900">
+                        <button class="bg-indigo-600 px-4 py-2 rounded-r-lg hover:bg-indigo-700">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="index.js">
+</script>
+</body>
+</html>

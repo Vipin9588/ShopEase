@@ -1,0 +1,22 @@
+ /* keep your existing animations/transitions and loader styles */
+        .product-card { transition: all 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        svg { width: 3.25em; transform-origin: center; animation: rotate4 2s linear infinite; }
+        circle { fill: none; stroke: hsl(214, 97%, 59%); stroke-width: 2; stroke-dasharray: 1, 200; stroke-dashoffset: 0; stroke-linecap: round; animation: dash4 1.5s ease-in-out infinite; }
+        .loaderContainer { display: none; }
+        @keyframes rotate4 { 100% { transform: rotate(360deg); } }
+        @keyframes dash4 {
+            0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; }
+            50% { stroke-dasharray: 90, 200; stroke-dashoffset: -35px; }
+            100% { stroke-dashoffset: -125px; }
+        }
+
+        /* small responsive tweaks */
+        .truncate-2 {
+            display: -webkit-box;
+            /* -webkit-line-clamp: 2; */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
